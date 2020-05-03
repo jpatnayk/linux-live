@@ -22,7 +22,7 @@ read DIR
 # Fedora changes, commented out the original 'apt-get' and added    
 # lines 25, 30 - 32
 # apt-get --yes build-dep syslinux
-sudo yum buildep syslinux
+sudo yum builddep syslinux
 
 mkdir -m 0777 /tmp/syslinux
 cd /tmp/syslinux
