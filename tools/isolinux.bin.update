@@ -19,10 +19,16 @@ read DIR
 
 # download, unpack, and patch syslinux
 
-apt-get --yes build-dep syslinux
+# Fedora changes, replaced and commented out original
+# apt-get --yes build-dep syslinux
+sudo yum buildep syslinux
+
 mkdir -m 0777 /tmp/syslinux
 cd /tmp/syslinux
-apt-get source syslinux
+# apt-get source syslinux
+sudo yum download --source syslinux
+rpm2cpio syslinux-6.04-0.8.fc28.src.rpm | cpio -i
+tar xvf syslinux-6.04-pre1.tar.xz
 cd syslinux*/core
 
 for file in fs/iso9660/iso9660.c fs/lib/loadconfig.c elflink/load_env32.c; do
