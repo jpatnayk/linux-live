@@ -19,7 +19,8 @@ read DIR
 
 # download, unpack, and patch syslinux
 
-# Fedora changes, replaced and commented out original
+# Fedora changes, commented out the original 'apt-get' and added    
+# lines 25, 30 - 32
 # apt-get --yes build-dep syslinux
 sudo yum buildep syslinux
 
